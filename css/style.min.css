@@ -30,6 +30,9 @@ body {
     background: linear-gradient(to right, #f5af19, #f12711); */
   }
 
+.perfil img {
+  max-width: 150px;
+}
 .boxed-page {
   margin: 0 auto;
   margin-top: 6rem;
