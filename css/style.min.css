@@ -244,8 +244,13 @@ a {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  padding: 20px;
-}
+  padding: 20px; }
+  @media (max-width: 770px) {
+    .vertical-box {
+      position: relative !important;
+    }
+  }
+
 
 .jumbotron {
   background-color: #fff;
@@ -280,6 +285,15 @@ a {
 .jumbotron p {
   font-size: 16pt;
 }
+
+@media (max-width: 770px) {
+  .jumbotron p {
+    font-size: 16pt;
+    margin-top: 6em !important;
+  }
+}
+
+
 .filter-button-group {
   margin-bottom: 15px; }
   .filter-button-group a {
