@@ -41,30 +41,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-    var requestUrl = "http://ip-api.com/json";
-
-    $.ajax({
-      url: requestUrl,
-      type: 'GET',
-      success: function(json)
-      {
-        if (json.country = "Argentina") {
+    $.get("https://ipinfo.io", function(response) {
+        console.log(response.country);
+    
+        if (response.country == "AR") {
           $('#precio1').html('1.200 ARS');
           $('#precio2').html('1.400 ARS');
           $('#precio3').html('1.100 ARS');
         }
-        if (json.country = "Colombia") {
+        if (response.country == "CO") {
           $('#precio1').html('45.000 COP');
           $('#precio2').html('55.000 COP');
           $('#precio3').html('350.000 COP');
         }
+    }, "jsonp")
 
-      },
-      error: function(err)
-      {
-        console.log("Request failed, error= " + err);
-      }
-    });
+    
+//     var requestUrl = "http://ip-api.com/json";
+
+//     $.ajax({
+//       url: requestUrl,
+//       type: 'GET',
+//       success: function(json)
+//       {
+//         if (json.country = "Argentina") {
+//           $('#precio1').html('1.200 ARS');
+//           $('#precio2').html('1.400 ARS');
+//           $('#precio3').html('1.100 ARS');
+//         }
+//         if (json.country = "Colombia") {
+//           $('#precio1').html('45.000 COP');
+//           $('#precio2').html('55.000 COP');
+//           $('#precio3').html('350.000 COP');
+//         }
+// 
+//       },
+//       error: function(err)
+//       {
+//         console.log("Request failed, error= " + err);
+//       }
+//     });
     </script>
 
 </head>
